@@ -15,14 +15,13 @@ class Config:
     # API Keys
     GITHUB_TOKEN = get("GITHUB_TOKEN")
     NOTION_API_KEY = get("NOTION_API_KEY")
-    OPENROUTER_API_KEY = get("OPENROUTER_API_KEY")
+    DASHSCOPE_API_KEY = get("DASHSCOPE_API_KEY")
     PEXELS_API_KEY = get("PEXELS_API_KEY")
     XIAOHONGSHU_CDP_KEY = get("XIAOHONGSHU_CDP_KEY")
     
     # LLM Settings
-    USE_LLAMA_CPP = get("USE_LLAMA_CPP", "false").lower() == "true"
-    LLM_PROVIDER = get("LLM_PROVIDER", "openrouter")
-    LLAMA_MODEL_PATH = get("LLAMA_MODEL_PATH", "~/.cache/llama/Qwen1.5-7B-Chat-GGUF/q4_k_m.gguf")
+    LLM_PROVIDER = get("LLM_PROVIDER", "dashscope")
+    DASHSCOPE_MODEL = get("DASHSCOPE_MODEL", "qwen-max")
     
     # Browser
     BU_NAME = get("BU_NAME", "default")
